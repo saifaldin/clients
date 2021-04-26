@@ -1,5 +1,5 @@
-import { BaseAPI } from "./base";
-import { PostsApi, VotesApi } from "./index";
+import { BaseAPI } from "./client/base";
+import { PostsApi, VotesApi } from "./client/index";
 import * as axios from "axios";
 
 class MediaApi extends BaseAPI {
