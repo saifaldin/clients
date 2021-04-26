@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/seifeldeen3388/clients#readme",
   "dependencies": {
-    "@openapitools/openapi-generator-cli": "2.2.6"
+    "@openapitools/openapi-generator-cli": "2.2.6",
+    "axios": "0.21.1"
   },
   "devDependencies": {
     "@stoplight/prism-cli": "4.2.0",

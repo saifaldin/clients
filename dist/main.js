@@ -28,13 +28,10 @@ var __assign = (this && this.__assign) || function () {
 exports.__esModule = true;
 exports.MediaApi = void 0;
 var base_1 = require("./base");
-var index_1 = require("./index");
 var API = require("./index");
+var axios = require("axios");
 var MediaApi = /** @class */ (function (_super) {
     __extends(MediaApi, _super);
-    function MediaApi() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
     /**
      *
      * @summary Add the media data related to a post
@@ -45,11 +42,16 @@ var MediaApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof MediaApi
      */
+    function MediaApi(basePath) {
+        var _this = _super.call(this) || this;
+        basePath = basePath;
+        return _this;
+    }
     MediaApi.prototype.uploadOneMedia = function (file, entityType, entityId, options) {
-        var _this = this;
-        return index_1.MediaApiFp(this.configuration)
-            .uploadOneMedia()
-            .then(function (request) { return request(_this.axios, _this.basePath); });
+        return axios["default"].get(this.basePath + "/media", { method: "POST" });
+        // return MediaApiFp(this.configuration)
+        //   .uploadOneMedia()
+        //   .then((request) => request(this.axios, this.basePath));
     };
     return MediaApi;
 }(base_1.BaseAPI));

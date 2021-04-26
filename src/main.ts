@@ -1,7 +1,6 @@
 import { BaseAPI } from "./base";
-import { MediaApiFp } from "./index";
 import * as API from "./index";
-
+import * as axios from "axios";
 export class MediaApi extends BaseAPI {
   /**
    *
@@ -13,15 +12,21 @@ export class MediaApi extends BaseAPI {
    * @throws {RequiredError}
    * @memberof MediaApi
    */
+  constructor(basePath: string) {
+    super();
+    basePath = basePath;
+  }
+
   public uploadOneMedia(
     file?: any,
     entityType?: string,
     entityId?: string,
     options?: any
   ) {
-    return MediaApiFp(this.configuration)
-      .uploadOneMedia()
-      .then((request) => request(this.axios, this.basePath));
+    return axios.default.get(`${this.basePath}/media`, { method: "POST" });
+    // return MediaApiFp(this.configuration)
+    //   .uploadOneMedia()
+    //   .then((request) => request(this.axios, this.basePath));
   }
 }
 
