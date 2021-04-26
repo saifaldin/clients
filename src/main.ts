@@ -2,7 +2,7 @@ import { BaseAPI } from "./base";
 import { PostsApi, VotesApi } from "./index";
 import * as axios from "axios";
 
-export class MediaApi extends BaseAPI {
+class MediaApi extends BaseAPI {
   /**
    *
    * @summary Add the media data related to a post
@@ -28,4 +28,4 @@ export class MediaApi extends BaseAPI {
   }
 }
 
-export default { PostsApi, VotesApi, MediaApi };
+export { PostsApi, VotesApi, MediaApi };
