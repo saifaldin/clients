@@ -1,6 +1,7 @@
 import { BaseAPI } from "./base";
 import * as API from "./index";
 import * as axios from "axios";
+
 export class MediaApi extends BaseAPI {
   /**
    *
