@@ -1,18 +1,8 @@
 import { BaseAPI } from "./client/base";
-import { PostsApi, VotesApi } from "./client/index";
+import { PostsApi, VotesApi, MediaApi as Main } from "./client/index";
 import * as axios from "axios";
 
-class MediaApi extends BaseAPI {
-  /**
-   *
-   * @summary Add the media data related to a post
-   * @param {any} [file]
-   * @param {string} [entityType]
-   * @param {string} [entityId]
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MediaApi
-   */
+class Media extends Main {
   constructor(options: { basePath: string }) {
     super();
     this.basePath = options.basePath;
@@ -28,4 +18,4 @@ class MediaApi extends BaseAPI {
   }
 }
 
-export { PostsApi, VotesApi, MediaApi };
+export { PostsApi, VotesApi, Media as MediaApi };
