@@ -2,8 +2,8 @@
   "name": "pickly-clients",
   "version": "0.0.0-development",
   "description": "Pickly-backend's clients API",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "scripts": {
     "mock_api": "prism mock -d ./src/swagger/posts_client.yml",
     "generate_client": "openapi-generator-cli generate -g typescript-axios -i ./src/swagger/posts_client.yml -o ./src/",
