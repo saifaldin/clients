@@ -23,7 +23,7 @@ export class MediaApi extends BaseAPI {
     entityId?: string,
     options?: any
   ) {
-    return axios.default.get(`${this.basePath}/media`, { method: "POST" });
+    return axios.default.post(`${this.basePath}/media`, {});
     // return MediaApiFp(this.configuration)
     //   .uploadOneMedia()
     //   .then((request) => request(this.axios, this.basePath));
