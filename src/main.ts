@@ -13,10 +13,11 @@ export class MediaApi extends BaseAPI {
    * @throws {RequiredError}
    * @memberof MediaApi
    */
-  constructor(basePath: string) {
+   constructor(options:{basePath:string}) {
     super();
-    basePath = basePath;
+    this.basePath = options.basePath;
   }
+
 
   public uploadOneMedia(
     file?: any,
