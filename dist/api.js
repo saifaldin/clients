@@ -112,9 +112,9 @@ var MediaApiAxiosParamCreator = function (configuration) {
         /**
          *
          * @summary Add the media data related to a post
-         * @param {any} file
-         * @param {string} entityType
-         * @param {string} entityId
+         * @param {any} [file]
+         * @param {string} [entityType]
+         * @param {string} [entityId]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -123,12 +123,6 @@ var MediaApiAxiosParamCreator = function (configuration) {
             return __awaiter(_this, void 0, void 0, function () {
                 var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarFormParams, headersFromBaseOptions;
                 return __generator(this, function (_a) {
-                    // verify required parameter 'file' is not null or undefined
-                    common_1.assertParamExists('uploadOneMedia', 'file', file);
-                    // verify required parameter 'entityType' is not null or undefined
-                    common_1.assertParamExists('uploadOneMedia', 'entityType', entityType);
-                    // verify required parameter 'entityId' is not null or undefined
-                    common_1.assertParamExists('uploadOneMedia', 'entityId', entityId);
                     localVarPath = "/media";
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
@@ -172,9 +166,9 @@ var MediaApiFp = function (configuration) {
         /**
          *
          * @summary Add the media data related to a post
-         * @param {any} file
-         * @param {string} entityType
-         * @param {string} entityId
+         * @param {any} [file]
+         * @param {string} [entityType]
+         * @param {string} [entityId]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -204,9 +198,9 @@ var MediaApiFactory = function (configuration, basePath, axios) {
         /**
          *
          * @summary Add the media data related to a post
-         * @param {any} file
-         * @param {string} entityType
-         * @param {string} entityId
+         * @param {any} [file]
+         * @param {string} [entityType]
+         * @param {string} [entityId]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -230,9 +224,9 @@ var MediaApi = /** @class */ (function (_super) {
     /**
      *
      * @summary Add the media data related to a post
-     * @param {any} file
-     * @param {string} entityType
-     * @param {string} entityId
+     * @param {any} [file]
+     * @param {string} [entityType]
+     * @param {string} [entityId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MediaApi

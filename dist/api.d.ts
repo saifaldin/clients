@@ -411,13 +411,13 @@ export declare const MediaApiAxiosParamCreator: (configuration?: Configuration |
     /**
      *
      * @summary Add the media data related to a post
-     * @param {any} file
-     * @param {string} entityType
-     * @param {string} entityId
+     * @param {any} [file]
+     * @param {string} [entityType]
+     * @param {string} [entityId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    uploadOneMedia: (file: any, entityType: string, entityId: string, options?: any) => Promise<RequestArgs>;
+    uploadOneMedia: (file?: any, entityType?: string | undefined, entityId?: string | undefined, options?: any) => Promise<RequestArgs>;
 };
 /**
  * MediaApi - functional programming interface
@@ -427,13 +427,13 @@ export declare const MediaApiFp: (configuration?: Configuration | undefined) => 
     /**
      *
      * @summary Add the media data related to a post
-     * @param {any} file
-     * @param {string} entityType
-     * @param {string} entityId
+     * @param {any} [file]
+     * @param {string} [entityType]
+     * @param {string} [entityId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    uploadOneMedia(file: any, entityType: string, entityId: string, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2001>>;
+    uploadOneMedia(file?: any, entityType?: string | undefined, entityId?: string | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2001>>;
 };
 /**
  * MediaApi - factory interface
@@ -443,13 +443,13 @@ export declare const MediaApiFactory: (configuration?: Configuration | undefined
     /**
      *
      * @summary Add the media data related to a post
-     * @param {any} file
-     * @param {string} entityType
-     * @param {string} entityId
+     * @param {any} [file]
+     * @param {string} [entityType]
+     * @param {string} [entityId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    uploadOneMedia(file: any, entityType: string, entityId: string, options?: any): AxiosPromise<InlineResponse2001>;
+    uploadOneMedia(file?: any, entityType?: string | undefined, entityId?: string | undefined, options?: any): AxiosPromise<InlineResponse2001>;
 };
 /**
  * MediaApi - object-oriented interface
@@ -461,14 +461,14 @@ export declare class MediaApi extends BaseAPI {
     /**
      *
      * @summary Add the media data related to a post
-     * @param {any} file
-     * @param {string} entityType
-     * @param {string} entityId
+     * @param {any} [file]
+     * @param {string} [entityType]
+     * @param {string} [entityId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MediaApi
      */
-    uploadOneMedia(file: any, entityType: string, entityId: string, options?: any): Promise<import("axios").AxiosResponse<InlineResponse2001>>;
+    uploadOneMedia(file?: any, entityType?: string, entityId?: string, options?: any): Promise<import("axios").AxiosResponse<InlineResponse2001>>;
 }
 /**
  * PostsApi - axios parameter creator
