@@ -1,5 +1,5 @@
 import { BaseAPI } from "./base";
-import * as API from "./index";
+import { PostsApi, VotesApi } from "./index";
 import * as axios from "axios";
 
 export class MediaApi extends BaseAPI {
@@ -13,11 +13,10 @@ export class MediaApi extends BaseAPI {
    * @throws {RequiredError}
    * @memberof MediaApi
    */
-   constructor(options:{basePath:string}) {
+  constructor(options: { basePath: string }) {
     super();
     this.basePath = options.basePath;
   }
-
 
   public uploadOneMedia(
     file?: any,
@@ -26,10 +25,7 @@ export class MediaApi extends BaseAPI {
     options?: any
   ) {
     return axios.default.post(`${this.basePath}/media`, {});
-    // return MediaApiFp(this.configuration)
-    //   .uploadOneMedia()
-    //   .then((request) => request(this.axios, this.basePath));
   }
 }
 
-export default { ...API, MediaApi };
+export default { PostsApi, VotesApi, MediaApi };
