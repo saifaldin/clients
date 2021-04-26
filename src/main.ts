@@ -19,9 +19,9 @@ export class MediaApi extends BaseAPI {
   }
 
   public uploadOneMedia(
-    file?: any,
-    entityType?: string,
-    entityId?: string,
+    file: any,
+    entityType: string,
+    entityId: string,
     options?: any
   ) {
     return axios.default.post(`${this.basePath}/media`, {});
