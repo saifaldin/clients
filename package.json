@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/seifeldeen3388/clients.git"
+    "url": "https://github.com/saifaldin/clients.git"
   },
   "keywords": [
     "pickly"
@@ -23,9 +23,9 @@
   "author": "Seif-Eldeen Ibrahem <seifeldeen3388@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seifeldeen3388/clients/issues"
+    "url": "https://github.com/saifaldin/clients/issues"
   },
-  "homepage": "https://github.com/seifeldeen3388/clients#readme",
+  "homepage": "https://github.com/saifaldin/clients#readme",
   "dependencies": {
     "@openapitools/openapi-generator-cli": "2.2.6",
     "axios": "0.21.1"
