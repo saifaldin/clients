@@ -8,6 +8,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{github.event}}
       - name: Checkout
         uses: actions/checkout@v2
         with:
