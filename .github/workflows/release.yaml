@@ -1,13 +1,14 @@
 name: Release
 on:
   push:
-    paths:
-      - .gitignore
+    branches:
+      - master
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{github.event}}
       - name: Checkout
         uses: actions/checkout@v2
         with:
